@@ -1,15 +1,11 @@
 import {
-  Button,
   Checkbox,
-  Dialog,
   Divider,
   FormControlLabel,
   Grid,
   Typography,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useCallback } from "react";
-import { useTranslation } from "react-i18next";
 import logo from "assets/logo/MusesignWhite.png";
 import routes from "configs/routes.config.json";
 import { TextField } from "components/core/TextField";
@@ -126,7 +122,6 @@ export const Login = () => {
               label={t("login.remember-me")}
               control={<Checkbox />}
               componentsProps={{ typography: { variant: "body2" } }}
-              sx={{ "& .MuiSvgIcon-root": { fontSize: 20 }, ...typographySx }}
             />
 
             <RecoverPasswordPopup />
