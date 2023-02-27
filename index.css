@@ -1,12 +1,15 @@
+/* Import styles */
 @import url("reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
+/* Define primary colors */
 :root {
   --primary-main: #f8c82d;
-  --primary-contrastText: #fff;
+  --primary-contrast-text: #fff;
   --primary-blackText: #000000;
 }
 
+/* Define common styles for the page */
 body,
 html {
   font-size: 16px;
@@ -19,6 +22,7 @@ html {
   align-items: center;
 }
 
+/* Define styles for the login card container */
 .login-card-container {
   display: flex;
   width: 68rem;
@@ -30,21 +34,23 @@ html {
   margin: 0px;
 }
 
-a {
-  color: var(--primary-blackText);
-}
-
+/* Define styles for links */
+a,
 a:focus {
   color: var(--primary-blackText);
   text-decoration: none;
 }
 
-/* ----------------------- SIDEBAR --------------------- */
+a:focus {
+  outline: none;
+}
+
+/* Define styles for the login card sidebar */
 .login-card-sidebar {
   width: 68rem;
   height: 58rem;
   background-color: var(--primary-main);
-  color: var(--primary-contrastText);
+  color: var(--primary-contrast-text);
   flex: 1.5;
   border-radius: 5px 0px 0px 5px;
 }
@@ -67,8 +73,7 @@ a:focus {
   margin-left: 2.5rem;
 }
 
-/* -------------- MAIN ------------------ */
-
+/* Define styles for the login card main content */
 .login-card-main-content-container {
   display: flex;
   justify-content: center;
@@ -92,6 +97,7 @@ a:focus {
   font-weight: 700;
 }
 
+/* Define styles for buttons */
 .btn {
   width: 29.63rem;
   height: 2.75rem;
@@ -133,7 +139,7 @@ svg {
 }
 
 #btn-facebook {
-  color: var(--primary-contrastText);
+  color: var(--primary-contrast-text);
   background-color: rgb(66, 103, 178);
 }
 
@@ -200,7 +206,12 @@ hr {
   outline: none;
 }
 
-#btn-login:hover:before {
+#btn-login:hover {
+  box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%),
+    0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+
+#btn-login:before {
   content: "";
   position: absolute;
   top: 0;
@@ -208,7 +219,7 @@ hr {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.25s ease-out;
   opacity: 1;
 }
 
