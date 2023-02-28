@@ -45,6 +45,10 @@ a:focus {
   outline: none;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
 /* Define styles for the login card sidebar */
 .login-card-sidebar {
   width: 68rem;
@@ -267,3 +271,5 @@ hr {
   display: none;
   white-space: break-spaces;
 }
+
+/* Media queries */
